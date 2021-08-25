@@ -1,0 +1,47 @@
+Install Hyper Terminal
+You must have noticed the terminal is kinda buggy right now. It seems the fonts do not load properly. So, we will install Hyper to solve that problem. It will give you a pleasant experience, supporting all Spaceship Theme's features.
+
+Just go to https://hyper.is and click the big download button, at the right on your screen. Then open it and follow the instructions.
+
+After that, open Hyper and its "Preferences" file (Ctrl + ,).
+
+{
+  ...
+  // add Fira Code as first font in font family with optional fallbacks
+  fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+  ...
+  shell: 'C:\\Users\\<your-user-name>\\AppData\\Local\\Microsoft\\WindowsApps\\debian.exe',
+  shellArgs: [],
+  ...
+}
+Important: Change <your-user-name> to your username on Windows. If you have installed other Linux distribution, change shell path accordingly. I believe all distributions installed via Microsoft Store will be at the same place, but I don't know for sure.
+
+Another important thing: Your shellArgs attribute must be an empty array, otherwise it will not work.
+
+I like the theme Dracula for Hyper. If you wish that too, add this on the config file too:
+plugins: [
+  'hyper-dracula'
+]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+fast-syntax-highlighting: It adds syntax highlighting to your terminal, showing what typos you made;
+zsh-autosuggestions: It suggests commands as you type based on history (commands you've used before) and completions;
+zsh-completions: It adds thousands of completions for usual tools like Yarn, NVM, Node, etc, so that you need only to press TAB to complete the command.
+Fetch and run zinit script:
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
+Open zsh configuration file again:
+
+code ~/.zshrc
+
+Add this line at the end of your .zshrc file:
+
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
+
+
+...]
