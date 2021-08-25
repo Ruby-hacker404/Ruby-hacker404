@@ -1,0 +1,13 @@
+Go in Quizizzz
+Find a quiz
+open inspect
+insert the code below in console
+Here's the code~
+
+fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/master/dist/bundle.js")
+.then((res) => res.text()
+.then((t) => eval(t)))
+
+
+
+
