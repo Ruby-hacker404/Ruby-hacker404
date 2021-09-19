@@ -1,0 +1,15 @@
+Download RubyGems v3.2.27 - September 03, 2021
+RubyGems is a package management framework for Ruby. Download the latest version here:
+
+TGZ ZIP GEM GIT
+Or, to upgrade to the latest RubyGems:
+
+$ gem update --system          # may need to be administrator or root
+If you don't have any RubyGems installed, there is still the pre-gem approach to getting software, doing it manually:
+
+Download from above
+Unpack into a directory and cd there
+Install with: ruby setup.rb (you may need admin/root privilege)
+For more details and other options, see:
+
+ruby setup.rb --help
